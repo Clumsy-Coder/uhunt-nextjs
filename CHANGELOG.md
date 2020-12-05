@@ -1,3 +1,11 @@
+### [1.0.1](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.0...1.0.1) (2020-12-05)
+
+
+### 👷 Continuous Integration
+
+* **dependabot:** add dependabot config ([120256b](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/120256bb292b4e035dc34f0371889ada04d1e6e5))
+* **github-actions:** add workflow to Automerge dependabot pull requests ([46b76a6](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/46b76a6d81455bc6ac9fb58725ac39acc16c63fd)), closes [/github.com/dependabot/dependabot-core/issues/2268#issuecomment-654608325](https://github.com/Clumsy-Coder//github.com/dependabot/dependabot-core/issues/2268/issues/issuecomment-654608325)
+
 ## 1.0.0 (2020-12-05)
 
 
