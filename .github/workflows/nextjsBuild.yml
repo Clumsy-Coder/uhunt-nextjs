@@ -20,31 +20,31 @@ jobs:
         env:
           cache-name: cache-node-modules
         with:
-          path: "**/node_modules"
+          path: '**/node_modules'
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
           restore-keys: ${{ runner.os }}-build-${{ env.cache-name }}-
 
       - name: Install npm dependencies
         run: yarn install
 
-  # lint:
-  #   needs: install
-  #   runs-on: ubuntu-latest
-  #   timeout-minutes: 10
-  #   steps:
-  #     - uses: actions/checkout@v2
+  lint:
+    needs: install
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v2
 
-  #     - name: Cache node modules
-  #       uses: actions/cache@v2
-  #       env:
-  #         cache-name: cache-node-modules
-  #       with:
-  #         path: '**/node_modules'
-  #         key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-  #         restore-keys: ${{ runner.os }}-build-${{ env.cache-name }}-
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: ${{ runner.os }}-build-${{ env.cache-name }}-
 
-  #     - name: Lint project
-  #       run: yarn lint
+      - name: Lint project
+        run: yarn lint
 
   # test:
   #   needs: install
@@ -157,7 +157,7 @@ jobs:
 
   release:
     # needs: build
-    needs: install
+    needs: lint
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:
@@ -168,7 +168,7 @@ jobs:
         env:
           cache-name: cache-node-modules
         with:
-          path: "**/node_modules"
+          path: '**/node_modules'
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
           restore-keys: ${{ runner.os }}-build-${{ env.cache-name }}-
 
