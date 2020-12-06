@@ -1,3 +1,10 @@
+### [1.0.3](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.2...1.0.3) (2020-12-06)
+
+
+### 👷 Continuous Integration
+
+* **github-actions:** add 'lint' as the next job when running nextjsBuild.yml workflow ([#6](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/6)) ([ad29a51](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/ad29a51f63309527d2a12d173f68fb22e9419eea))
+
 ### [1.0.2](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.1...1.0.2) (2020-12-06)
 
 
