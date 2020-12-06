@@ -1,3 +1,24 @@
+### [1.0.2](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.1...1.0.2) (2020-12-06)
+
+
+### 📦 Build System
+
+* **npm:** add eslint npm packages ([ec9a7ac](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/ec9a7acbdaf7db9fd9c8819382a73b35ec92f63e))
+* **npm:** add npm scripts to run eslint and typscript linters ([dbceddb](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/dbceddbc10c364174e9e41825a0d845ebcf74620))
+* **npm:** add Typescript npm package ([022624f](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/022624f66267ce1dd37be8bee4b6c33dc7cd4c0f))
+
+
+### 🐙 Miscellaneous Chores
+
+* **eslint:** add .eslintrc.js config file ([394c700](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/394c700f8e2a04e433cb8a341520922962eff0af))
+* **prettier:** add prettier config and ignore files ([2fd02a7](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/2fd02a77a338cde144377ca5352a95b4404524f3))
+* **typescript:** add tsconfig.json file ([bbe9246](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/bbe9246696c872361a450968edb2ccbbc673a702))
+
+
+### 💄 Styles
+
+* **semantic-release:** fix eslint linting issues ([dcc12d5](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/dcc12d5cf69f1c750eef88d1281ff31164de60d3))
+
 ### [1.0.1](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.0...1.0.1) (2020-12-05)
 
 
