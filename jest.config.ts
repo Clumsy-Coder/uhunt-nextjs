@@ -24,7 +24,7 @@ const config: Config.InitialOptions = {
     '!./semanticRelease/commitTypes.js',
     '!index.js',
   ],
-  // coverageDirectory: './test-results/coverage/',
+  coverageDirectory: './test-results/coverage/',
   coverageReporters: ['text', 'text-summary', 'lcov', 'clover', 'json'],
   reporters: [
     'default',
