@@ -1,7 +1,7 @@
 name: Dependbot Automerge
 on:
   pull_request:
-    types: ["opened"]
+    types: ['opened']
 
 jobs:
   Automerge:
@@ -13,10 +13,10 @@ jobs:
       (startsWith(github.event.pull_request.title, 'build(deps):') ||
       startsWith(github.event.pull_request.title, 'build(devDep):'))
     steps:
-      - name: "@dependabot squash and merge"
+      - name: '@dependabot squash and merge'
         uses: actions/github-script@v2
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
+          github-token: ${{secrets.GH_TOKEN_DEPENDABOT_AUTOMERGE}}
           script: |
             await github.issues.createComment({
               owner: context.repo.owner,
