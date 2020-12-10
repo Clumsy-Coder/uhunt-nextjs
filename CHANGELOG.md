@@ -1,3 +1,10 @@
+### [1.0.5](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.4...1.0.5) (2020-12-10)
+
+
+### 👷 Continuous Integration
+
+* **github-actions:** use personal access token secret when writing a comment in dependabot pull requests ([85b4257](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/85b42571add731ffaebf1c9667c223a02998e7b6))
+
 ### [1.0.4](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.3...1.0.4) (2020-12-10)
 
 
