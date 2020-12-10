@@ -1,3 +1,10 @@
+### [1.0.6](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.5...1.0.6) (2020-12-10)
+
+
+### 📦 Build System
+
+* **devDep:** bump @types/jest from 26.0.16 to 26.0.19 ([#12](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/12)) ([4b2dcba](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/4b2dcbaa149e17e3eeb8ee2cfc9753a02f37a2dd))
+
 ### [1.0.5](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.4...1.0.5) (2020-12-10)
 
 
