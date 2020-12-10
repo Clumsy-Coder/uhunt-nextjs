@@ -1,3 +1,24 @@
+### [1.0.4](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.3...1.0.4) (2020-12-10)
+
+
+### 📦 Build System
+
+* **npm:** add jest npm packages ([5cf09b8](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/5cf09b80e592043c0601078a684468d9adb6952b))
+
+
+### 🐙 Miscellaneous Chores
+
+* **gitignore:** add test-results/ to .gitignore ([bdea457](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/bdea457093b3624711ca78df73025298e011fb0f))
+* **jest:** add jest.config.ts and jest.setup.js config files ([2581d45](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/2581d45d4e7d7fee505487c97e6f9d9afe1db25e))
+* **jest:** set 'coverage directory' when running jest test coverage ([c73a15f](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/c73a15fb40dab55ba1d93a53f9499d2d33a71269))
+* **npm:** add script to run jest tests ([dc85fd7](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/dc85fd789a63fe128dc17df9bafb4da6eb833657))
+* **typescript:** add tsconfig when running jest ([7d377df](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/7d377df127af0c1650c8255713c81af0e2bb8737))
+
+
+### 👷 Continuous Integration
+
+* **github-actions:** add 'test' job when running nextjsBuild.yml workflow ([83b39b5](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/83b39b5dacbb07233d78edc19f69c7990e5b066a))
+
 ### [1.0.3](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.2...1.0.3) (2020-12-06)
 
 
