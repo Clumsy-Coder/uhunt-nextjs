@@ -1,3 +1,10 @@
+### [1.0.8](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.7...1.0.8) (2020-12-10)
+
+
+### 📦 Build System
+
+* **devDep:** bump ts-node from 9.1.0 to 9.1.1 ([#13](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/13)) ([5fb1682](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/5fb1682bbc4255889ba6ed276621a64a3889c228))
+
 ### [1.0.7](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.6...1.0.7) (2020-12-10)
 
 
