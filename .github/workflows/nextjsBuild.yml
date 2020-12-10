@@ -46,44 +46,44 @@ jobs:
       - name: Lint project
         run: yarn lint
 
-  # test:
-  #   needs: install
-  #   runs-on: ubuntu-latest
-  #   timeout-minutes: 10
-  #   steps:
-  #     - uses: actions/checkout@v2
+  test:
+    needs: install
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v2
 
-  #     - name: Cache node modules
-  #       uses: actions/cache@v2
-  #       env:
-  #         cache-name: cache-node-modules
-  #       with:
-  #         path: '**/node_modules'
-  #         key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-  #         restore-keys: |
-  #           ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-  #           ${{ runner.os }}-build-${{ env.cache-name }}-
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+            ${{ runner.os }}-build-${{ env.cache-name }}-
 
-  #     - name: Test project
-  #       run: yarn test --maxWorkers=2 --ci --coverage
+      - name: Test project
+        run: yarn test --maxWorkers=2 --ci --coverage
 
-  #     - name: Archive test results
-  #       uses: actions/upload-artifact@v1
-  #       with:
-  #         name: test-results
-  #         path: test-results/test-report.html
+      - name: Archive test results
+        uses: actions/upload-artifact@v1
+        with:
+          name: test-results
+          path: test-results/test-report.html
 
-  #     - name: Archive code coverage
-  #       uses: actions/upload-artifact@v1
-  #       with:
-  #         name: code-coverage
-  #         path: coverage/lcov-report/
+      - name: Archive code coverage
+        uses: actions/upload-artifact@v1
+        with:
+          name: code-coverage
+          path: test-results/coverage/lcov-report/
 
-  #     - name: Upload coverage to Codecov
-  #       uses: codecov/codecov-action@v1.0.7
-  #       with:
-  #         token: ${{ secrets.CODECOV_TOKEN }}
-  #         file: coverage/lcov.info
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1.0.7
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: test-results/coverage/lcov.info
 
   # build:
   #   needs: install
@@ -157,7 +157,7 @@ jobs:
 
   release:
     # needs: build
-    needs: lint
+    needs: test
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:
