@@ -28,8 +28,5 @@ EXPOSE 3000
 # The node user is provided in the Node.js Alpine base image
 USER node
 
-# Run npm start script when container starts
-CMD [ "yarn", "start" ]
-
 # Run npm start script with PM2 when container starts
 CMD [ "pm2-runtime", "npm", "--", "start" ]
