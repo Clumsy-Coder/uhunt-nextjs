@@ -1,7 +1,27 @@
 import React from 'react';
+import Link from 'next/link';
 
 const HomePage: React.FunctionComponent = () => {
-  return <div>Welcome to Next.js! favorites page</div>;
+  return (
+    <>
+      <h1>Welcome to Next.js! favorites page</h1>
+      <div>
+        <Link href='/'>index</Link>
+      </div>
+      <div>
+        <Link href='/about'>about</Link>
+      </div>
+      <div>
+        <Link href='/favorites'>favorites</Link>
+      </div>
+      <div>
+        <Link href='/problem'>problem</Link>
+      </div>
+      <div>
+        <Link href='/user'>user</Link>
+      </div>
+    </>
+  );
 };
 
 export default HomePage;
