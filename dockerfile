@@ -32,4 +32,4 @@ USER node
 CMD [ "yarn", "start" ]
 
 # Run npm start script with PM2 when container starts
-# CMD [ "pm2-runtime", "yarn", "--", "start" ]
+CMD [ "pm2-runtime", "npm", "--", "start" ]
