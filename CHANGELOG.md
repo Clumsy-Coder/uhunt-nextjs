@@ -1,3 +1,10 @@
+### [1.0.10](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.9...1.0.10) (2020-12-14)
+
+
+### 📦 Build System
+
+* **devDep:** bump eslint-plugin-prettier from 3.2.0 to 3.3.0 ([#15](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/15)) ([786c109](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/786c10988c1daa1884b076faa3ae197c1f38f407))
+
 ### [1.0.9](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.8...1.0.9) (2020-12-13)
 
 
