@@ -1,3 +1,10 @@
+### [1.0.12](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.11...1.0.12) (2020-12-16)
+
+
+### 📦 Build System
+
+* **devDep:** bump babel-plugin-module-resolver from 4.0.0 to 4.1.0 ([#17](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/17)) ([4078bb3](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/4078bb3c15f3bea2c68b6533a626aa70f875a87c))
+
 ### [1.0.11](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.10...1.0.11) (2020-12-15)
 
 
