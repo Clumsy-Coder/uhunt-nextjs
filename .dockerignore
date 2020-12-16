@@ -5,6 +5,7 @@ test-results/
 .git/
 node_modules/
 .next/
+out/
 nginx/
 
 .dockerignore
@@ -17,9 +18,10 @@ dockerfile
 .prettierignore
 .releaserc.js
 jest.config.ts
-jest.setup.js
+jest.setup.ts
 
 tsconfig.jest.json
 
 CHANGELOG.md
 README.md
+TODO
