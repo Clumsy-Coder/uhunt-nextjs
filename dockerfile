@@ -1,5 +1,5 @@
 # Base on offical Node.js Alpine image
-FROM node:latest
+FROM node:latest as builder
 
 # Set working directory
 WORKDIR /usr/app
@@ -28,11 +28,16 @@ RUN yarn install --production
 RUN /usr/local/bin/node-prune
 
 ####################################################### 
+
+FROM node:alpine
+
+WORKDIR /usr/app
+
+# COPY package.json next.config.js .env* ./
+# COPY --from=builder /usr/app/public ./public
+COPY --from=builder /usr/app/.next ./.next
+COPY --from=builder /usr/app/node_modules ./node_modules
+
 EXPOSE 3000
 
-# Run container as non-root (unprivileged) user
-# The node user is provided in the Node.js Alpine base image
-USER node
-
-# Run npm start script with PM2 when container starts
-CMD [ "pm2-runtime", "npm", "--", "start" ]
+CMD ["node_modules/.bin/next", "start"]
