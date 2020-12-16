@@ -11,7 +11,7 @@
     "lint:eslint": "eslint -c .eslintrc.js .",
     "lint:tsc": "tsc --build tsconfig.json .",
     "docker:build": "docker build -t uhunt-nextjs -f ./dockerfile .",
-    "docker:run": "docker run --rm -p 3000:3000 -d --name uhunt-nextjs uhunt-nextjs:latest ",
+    "docker:run": "docker run --rm -p 3000:3000 -d --name uhunt-nextjs uhunt-nextjs:latest && echo '\nGo to http://localhost:3000'",
     "docker:stop": "docker container stop uhunt-nextjs",
     "docker:logs": "docker logs -f uhunt-nextjs"
   },
