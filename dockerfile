@@ -48,6 +48,9 @@ COPY ./.nginx/default.conf /etc/nginx/conf.d/
 COPY --from=builder /usr/app/.next ./.next
 COPY --from=builder /usr/app/node_modules ./node_modules
 
-EXPOSE 3000
+# supervisor base configuration
+ADD supervisor.conf /etc/supervisor.conf
 
-CMD ["node_modules/.bin/next", "start"]
+# replace $PORT in nginx config (provided by executior) and start supervisord (run nextjs and nginx)
+CMD sed -i -e 's/$PORT/'"$PORT"'/g' /etc/nginx/conf.d/default.conf && \
+  supervisord -c /etc/supervisor.conf
