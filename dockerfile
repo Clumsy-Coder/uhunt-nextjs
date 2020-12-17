@@ -29,9 +29,19 @@ RUN /usr/local/bin/node-prune
 
 ####################################################### 
 
-FROM node:alpine
+FROM nginx:alpine
 
 WORKDIR /usr/app
+
+RUN apk add nodejs-current npm supervisor
+RUN mkdir mkdir -p /var/log/supervisor && mkdir -p /etc/supervisor/conf.d
+
+# Remove any existing config files
+RUN rm /etc/nginx/conf.d/*
+
+# Copy config files
+# *.conf files in conf.d/ dir get included in main config
+COPY ./.nginx/default.conf /etc/nginx/conf.d/
 
 # COPY package.json next.config.js .env* ./
 # COPY --from=builder /usr/app/public ./public
