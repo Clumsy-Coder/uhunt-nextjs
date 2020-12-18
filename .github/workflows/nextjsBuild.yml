@@ -127,10 +127,13 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -f ./dockerfile .
-            --tag ghcr.io/clumsy-coder/uhunt-nextjs:latest 
-            --tag ghcr.io/clumsy-coder/uhunt-nextjs:${{ env.NEXT_VERSION }}
-          docker images
+          docker build \
+            --tag ghcr.io/clumsy-coder/uhunt-nextjs:latest \
+            --tag ghcr.io/clumsy-coder/uhunt-nextjs:${{ env.NEXT_VERSION }} \
+            -f ./dockerfile .
+
+      - name: Display docker images
+        run: docker images
 
       - name: Push Docker image
         if: github.ref == 'refs/heads/master'
