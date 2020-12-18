@@ -31,6 +31,10 @@ RUN /usr/local/bin/node-prune
 
 FROM nginx:alpine
 
+# label used to connect the docker image to the github repo
+# check https://docs.github.com/en/free-pro-team@latest/packages/guides/connecting-a-repository-to-a-container-image#connecting-a-repository-to-a-container-image-on-the-command-line
+LABEL org.opencontainers.image.source https://github.com/clumsy-coder/uhunt-nextjs
+
 WORKDIR /usr/app
 
 RUN apk add nodejs-current npm supervisor
