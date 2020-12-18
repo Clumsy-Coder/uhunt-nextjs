@@ -128,7 +128,6 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -f ./dockerfile .
-            --cache-from ghcr.io/clumsy-coder/uhunt-nextjs:latest
             --tag ghcr.io/clumsy-coder/uhunt-nextjs:latest 
             --tag ghcr.io/clumsy-coder/uhunt-nextjs:${{ env.NEXT_VERSION }}
           docker images
