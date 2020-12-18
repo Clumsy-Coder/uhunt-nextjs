@@ -85,79 +85,62 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
           file: test-results/coverage/lcov.info
 
-  # build:
-  #   needs: install
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
+  build:
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
 
-  #     - name: Cache node modules
-  #       uses: actions/cache@v2
-  #       env:
-  #         cache-name: cache-node-modules
-  #       with:
-  #         path: '**/node_modules'
-  #         key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-  #         restore-keys: ${{ runner.os }}-build-${{ env.cache-name }}-
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: ${{ runner.os }}-build-${{ env.cache-name }}-
 
-  #     - name: Create properties file
-  #       run: |
-  #         printf 'RELEASE_KEY_STORE=%s\n' ${{ secrets.RELEASE_KEY_STORE }} >> android/release-keystore.properties
-  #         printf 'RELEASE_KEY_ALIAS_NAME=%s\n' '${{ secrets.RELEASE_KEY_ALIAS_NAME }}' >> android/release-keystore.properties
-  #         printf 'RELEASE_KEY_ALIAS_PASSWORD=%s\n' '${{ secrets.RELEASE_KEY_ALIAS_PASSWORD }}' >> android/release-keystore.properties
-  #         printf 'RELEASE_KEY_STORE_PASSWORD=%s\n' '${{ secrets.RELEASE_KEY_STORE_PASSWORD }}' >> android/release-keystore.properties
+      # - name: Generate .ENV file
+      #   run: |
+      #     printf 'BUILD_VERSION=%s\n' $(echo ${{ github.sha }} | cut -c -7) >> .env
+      #     printf 'API_KEY=%s\n' '${{ secrets.API_KEY }}' >> .env
+      #     printf 'DEV_API_KEY=%s\n' '${{ secrets.DEV_API_KEY }}' >> .env
 
-  #     - name: Decode Android key
-  #       run: |
-  #         echo "${{ secrets.KEYSTORE }}" > keystore-base64
-  #         base64 -d -i keystore-base64 > android/app/release.keystore
+      - name: Update semantic-version in package.json
+        # NOTE: this will run successfully on master branch. on any other branch it will use the current npm version
+        # run semantic-version in dry-run mode
+        # extract string that starts with "Release note"
+        # extract version number
+        # update version using "npm version"
+        run: |
+          yarn semantic-release -d | grep 'Release note' | grep -Po "(\d+)\.(\d+)\.(\d+)" | xargs npm version --allow-same-version --no-git-tag-version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  #     - name: Cache Android dependencies
-  #       uses: actions/cache@v2
-  #       env:
-  #         cache-name: cache-android-dependencies
-  #       with:
-  #         path: |
-  #           ~/.gradle/
-  #           ~/.m2/
-  #         key: jars-{{ hashFiles('android/gradle/wrapper/gradle-wrapper.properties') }}-{{ hashFiles("android/build.gradle") }}-{{ hashFiles('android/app/build.gradle') }}
-  #         restore-keys: jars-{{ hashFiles('android/gradle/wrapper/gradle-wrapper.properties') }}-{{ hashFiles("android/build.gradle") }}-
+      - name: Store next semantic-version to github-action env
+        run: |
+          npm run env | grep npm_package_version | cut -d '=' -f 2 | awk '{print NEXT_VERSION=$1}' >> $GITHUB_ENV
+          echo ${{ env.NEXT_VERSION }}
 
-  #     - name: Download Android dependencies
-  #       run: |
-  #         cd android
-  #         ./gradlew androidDependencies
-  #         cd ..
+      - name: Docker login
+        run: echo ${{ secrets.GHCR_TOKEN }} | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin
 
-  #     - name: Generate .ENV file
-  #       run: |
-  #         printf 'BUILD_VERSION=%s\n' $(echo ${{ github.sha }} | cut -c -7) >> .env
-  #         printf 'API_KEY=%s\n' '${{ secrets.API_KEY }}' >> .env
-  #         printf 'DEV_API_KEY=%s\n' '${{ secrets.DEV_API_KEY }}' >> .env
+      - name: Build Docker image
+        run: |
+          docker build -f ./dockerfile .
+            --cache-from ghcr.io/clumsy-coder/uhunt-nextjs:latest
+            --tag ghcr.io/clumsy-coder/uhunt-nextjs:latest 
+            --tag ghcr.io/clumsy-coder/uhunt-nextjs:${{ env.NEXT_VERSION }}
+          docker images
 
-  #     - name: Update semantic-version in package.json
-  #       # NOTE: this will run successfully on master branch. on any other branch it will use the current npm version
-  #       # run semantic-version in dry-run mode
-  #       # extract string that starts with "Release note"
-  #       # extract version number
-  #       # update version using "npm version"
-  #       run: |
-  #         yarn semantic-release -d | grep 'Release note' | grep -Po "(\d+)\.(\d+)\.(\d+)" | xargs npm version --allow-same-version --no-git-tag-version
-  #       env:
-  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  #     - name: Build Android APK
-  #       run: yarn build:android:release
-
-  #     - name: Upload Artifact
-  #       uses: actions/upload-artifact@v1
-  #       with:
-  #         name: app-release.apk
-  #         path: android/app/build/outputs/apk/release/
+      - name: Push Docker image
+        if: github.ref == 'refs/heads/master'
+        run: |
+          docker push ghcr.io/clumsy-coder/uhunt-nextjs:latest
+          docker push ghcr.io/clumsy-coder/uhunt-nextjs:${{ env.NEXT_VERSION }}
 
   release:
-    # needs: build
-    needs: test
+    needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:
