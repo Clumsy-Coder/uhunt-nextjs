@@ -6,6 +6,10 @@ env:
   YARN_PACKAGE_CACHE_KEY: v1
   YARN_CACHE_FOLDER: .cache/yarn
   FORCE_COLOR: true # display terminal colors
+  APP_NAME: uhunt-nextjs
+  HEROKU_REGISTRY: registry.heroku.com
+  HEROKU_REGISTRY_IMAGE: registry.heroku.com/uhunt-nextjs/web
+  GHCR_IMAGE: ghcr.io/clumsy-coder/uhunt-nextjs
 
 jobs:
   install:
@@ -121,24 +125,80 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Docker login
-        run: echo ${{ secrets.GHCR_TOKEN }} | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin
+      # - name: Docker login
+      #   run: echo ${{ secrets.GHCR_TOKEN }} | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin
 
-      - name: Build Docker image
+      # - name: Build Docker image
+      #   run: |
+      #     docker build \
+      #       --tag ghcr.io/clumsy-coder/uhunt-nextjs:latest \
+      #       --tag ghcr.io/clumsy-coder/uhunt-nextjs:${{ env.NEXT_VERSION }} \
+      #       -f ./dockerfile .
+
+      # - name: Display docker images
+      #   run: docker images
+
+      # - name: Push Docker image
+      #   if: github.ref == 'refs/heads/master'
+      #   run: |
+      #     docker push ghcr.io/clumsy-coder/uhunt-nextjs:latest
+      #     docker push ghcr.io/clumsy-coder/uhunt-nextjs:${{ env.NEXT_VERSION }}
+
+      # https://geoffhudik.com/tech/2020/09/29/trying-github-container-registry-using-github-actions/
+      - name: Set Environment Variables
         run: |
-          docker build \
-            --tag ghcr.io/clumsy-coder/uhunt-nextjs:latest \
-            --tag ghcr.io/clumsy-coder/uhunt-nextjs:${{ env.NEXT_VERSION }} \
-            -f ./dockerfile .
+          echo "BUILD_DATE=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+          echo "GIT_SHA=$(echo ${{ github.sha }} | cut -c1-7)" >> $GITHUB_ENV
+          echo "GIT_REF=$(git symbolic-ref -q --short HEAD || git describe --tags --exact-match)" >> $GITHUB_ENV
 
-      - name: Display docker images
-        run: docker images
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
 
-      - name: Push Docker image
-        if: github.ref == 'refs/heads/master'
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Cache Docker layers
+        uses: actions/cache@v2
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
+
+      - name: Login to Github Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GHCR_TOKEN }}
+
+      - name: Build Docker images
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./dockerfile
+          pull: true
+          load: true
+          tags: |
+            ${{ env.GHCR_IMAGE }}:latest
+            ${{ env.GHCR_IMAGE }}:${{ env.NEXT_VERSION }}
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache,mode=max
+          labels: |
+            org.opencontainers.image.authors=${{ github.repository_owner }}
+            org.opencontainers.image.created=${{ env.BUILD_DATE }}
+            org.opencontainers.image.description=Created from commit ${{ env.GIT_SHA }} and ref ${{ env.GIT_REF }}
+            org.opencontainers.image.ref.name=${{ env.GIT_REF }}
+            org.opencontainers.image.revision=${{ github.sha }}
+            org.opencontainers.image.source=https://github.com/${{ github.repository }}
+            org.opencontainers.image.version=${{ env.NEXT_VERSION }}
+
+      - name: Push Docker images to GitHub Container Registry
+        # if: github.ref == 'refs/heads/master'
         run: |
-          docker push ghcr.io/clumsy-coder/uhunt-nextjs:latest
-          docker push ghcr.io/clumsy-coder/uhunt-nextjs:${{ env.NEXT_VERSION }}
+          docker push ${{ env.GHCR_IMAGE }}:latest
+          docker push ${{ env.GHCR_IMAGE }}:${{ env.NEXT_VERSION }}
 
   release:
     needs: build
