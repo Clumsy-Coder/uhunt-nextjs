@@ -1,3 +1,11 @@
+### [1.0.13](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.12...1.0.13) (2020-12-21)
+
+
+### 📦 Build System
+
+* **devDep:** bump eslint-config-prettier from 7.0.0 to 7.1.0 ([#18](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/18)) ([bd9923c](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/bd9923c3ba4e31118ce2b5deb12efe94813757b3))
+* **devDep:** bump jest-html-reporters from 2.1.1 to 2.1.2 ([#20](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/20)) ([6abf33a](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/6abf33aa81757f13f416d2c8daa08d1eb3f1b8a6))
+
 ### [1.0.12](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.11...1.0.12) (2020-12-16)
 
 
