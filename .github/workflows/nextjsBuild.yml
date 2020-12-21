@@ -216,6 +216,32 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
           restore-keys: ${{ runner.os }}-build-${{ env.cache-name }}-
 
+      - name: Login to Github Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GHCR_TOKEN }}
+
+      - name: Pull Docker image from GitHub Container Registry
+        run: docker pull ${{ env.GHCR_IMAGE }}:latest
+
+      - name: Tag Docker image to Heroku Container Registry
+        run: docker tag ${{ env.GHCR_IMAGE }}:latest ${{ env.HEROKU_REGISTRY_IMAGE }}:latest
+
+      - name: Login to Heroku Container registry
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_AUTH_TOKEN }}
+        run: heroku container:login
+
+      - name: Push Docker images to Heroku Container Registry
+        run: docker push ${{ env.HEROKU_REGISTRY_IMAGE }}:latest
+
+      - name: Release
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_AUTH_TOKEN }}
+        run: heroku container:release -a ${{ env.APP_NAME }} web
+
       - name: semantic-release
         if: github.ref == 'refs/heads/master'
         run: yarn semantic-release --dry-run ${{github.ref != 'refs/heads/master'}} --ci ${{github.ref == 'refs/heads/master'}}
