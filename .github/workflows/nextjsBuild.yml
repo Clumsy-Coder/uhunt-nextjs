@@ -194,7 +194,7 @@ jobs:
             org.opencontainers.image.version=${{ env.NEXT_VERSION }}
 
       - name: Push Docker images to GitHub Container Registry
-        # if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/master'
         run: |
           docker push ${{ env.GHCR_IMAGE }}:latest
           docker push ${{ env.GHCR_IMAGE }}:${{ env.NEXT_VERSION }}
