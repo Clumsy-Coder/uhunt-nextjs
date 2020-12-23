@@ -1,3 +1,10 @@
+### [1.0.16](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.15...1.0.16) (2020-12-23)
+
+
+### 📦 Build System
+
+* **deps:** bump next from 10.0.3 to 10.0.4 ([#23](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/23)) ([48d6253](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/48d62535c491b8b8cb969a956fa276315fb13b84))
+
 ### [1.0.15](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.14...1.0.15) (2020-12-22)
 
 
