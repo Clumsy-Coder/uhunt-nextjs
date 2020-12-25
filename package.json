@@ -9,7 +9,13 @@
     "test": "jest --passWithNoTests",
     "lint": "tsc --build tsconfig.json . && eslint -c .eslintrc.js .",
     "lint:eslint": "eslint -c .eslintrc.js .",
-    "lint:tsc": "tsc --build tsconfig.json ."
+    "lint:tsc": "tsc --build tsconfig.json .",
+    "docker:build": "docker build -t uhunt-nextjs -f ./dockerfile .",
+    "docker:run": "docker run --rm -e 'PORT=80' -p 3000:80 -d --name uhunt-nextjs uhunt-nextjs:latest && echo '\nGo to http://localhost:3000'",
+    "docker:stop": "docker container stop uhunt-nextjs",
+    "docker:logs": "docker logs -f uhunt-nextjs",
+    "docker:logs:nginx": "docker exec uhunt-nextjs tail -f /var/log/supervisor/nginx.log",
+    "docker:logs:nextjs": "docker exec uhunt-nextjs tail -f /var/log/supervisor/nextjs.log"
   },
   "dependencies": {
     "next": "^10.0.4",
@@ -22,7 +28,10 @@
     "@semantic-release/commit-analyzer": "^8.0.1",
     "@semantic-release/git": "^9.0.0",
     "@semantic-release/release-notes-generator": "^9.0.1",
+    "@types/enzyme": "^3.10.8",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^26.0.19",
+    "@types/react": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.11.0",
     "babel-jest": "^26.6.3",
     "babel-plugin-module-resolver": "^4.1.0",
