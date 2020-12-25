@@ -1,3 +1,10 @@
+### [1.0.18](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.17...1.0.18) (2020-12-25)
+
+
+### 📦 Build System
+
+* **npm:** regenerate yarn.lock file ([d607d73](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/d607d73360e30466be0791dadd9d9c18ab529165))
+
 ### [1.0.17](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.16...1.0.17) (2020-12-25)
 
 
