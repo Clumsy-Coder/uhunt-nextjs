@@ -1,3 +1,11 @@
+### [1.0.19](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.18...1.0.19) (2020-12-26)
+
+
+### 👷 Continuous Integration
+
+* **github-actions:** create codeql-analysis.yml github-action ([e0a02de](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/e0a02deaaae21e17794e9d44b5c6498d98717498))
+* **github-actions:** remove checking out code HEAD^2 if running on pull request ([4d19e97](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/4d19e97800367e256ce8ec962fa80de9720ca5e5))
+
 ### [1.0.18](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.17...1.0.18) (2020-12-25)
 
 
