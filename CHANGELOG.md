@@ -1,3 +1,11 @@
+### [1.0.21](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.20...1.0.21) (2020-12-30)
+
+
+### 📦 Build System
+
+* **devDep:** bump eslint-plugin-react from 7.21.5 to 7.22.0 ([#27](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/27)) ([c56cc93](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/c56cc9370ab1c1e3bdca119d3c07233bf19f2f06))
+* **devDep:** bump semantic-release from 17.3.0 to 17.3.1 ([#28](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/28)) ([60a5977](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/60a5977dff8d5de4a05689c7bbf35f2ca7d3e941))
+
 ### [1.0.20](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.19...1.0.20) (2020-12-29)
 
 
