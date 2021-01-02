@@ -52,7 +52,11 @@ module.exports = {
   },
   settings: {
     'import/resolver': {
-      'babel-module': {},
+      // 'babel-module': {},
+      typescript: {},
+    },
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
   },
   ignorePatterns: ['test-results', 'metro.config.js', 'coverage', '.eslintrc.js'],
