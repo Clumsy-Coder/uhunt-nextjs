@@ -1,27 +1,19 @@
 import React from 'react';
-import Link from 'next/link';
+import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
 
-const HomePage: React.FunctionComponent = () => {
+const AboutPage: React.FunctionComponent = () => {
   return (
     <>
-      <h1>Welcome to Next.js! about page</h1>
-      <div>
-        <Link href='/'>index</Link>
-      </div>
-      <div>
-        <Link href='/about'>about</Link>
-      </div>
-      <div>
-        <Link href='/favorites'>favorites</Link>
-      </div>
-      <div>
-        <Link href='/problem'>problem</Link>
-      </div>
-      <div>
-        <Link href='/user'>user</Link>
-      </div>
+      <Container maxWidth='md'>
+        <br />
+        <Typography variant='h2'>About</Typography>
+        <br />
+        <Typography>Version: {process.env.NEXT_PUBLIC_VERSION}</Typography>
+        <Typography>Build: {process.env.NEXT_PUBLIC_BUILD_VERSION}</Typography>
+      </Container>
     </>
   );
 };
 
-export default HomePage;
+export default AboutPage;
