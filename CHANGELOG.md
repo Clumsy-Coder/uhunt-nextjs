@@ -1,3 +1,28 @@
+## [1.1.0](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.21...1.1.0) (2021-01-03)
+
+
+### 📦 Build System
+
+* **npm:** add @material-ui/core npm package ([36f2d7e](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/36f2d7eb5f5d78a397f4fff2b177f44cf73f26fa))
+* **npm:** add @material-ui/icons npm package ([bada54b](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/bada54b839704308bf95aa23edf8f0ba74dca98b))
+* **npm:** add npm packages to connect nextjs alias imports with typescript and eslint ([a962738](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/a96273874efc88fbe2e6faef076ee2ee61aa0712))
+
+
+### 🐙 Miscellaneous Chores
+
+* **eslint:** use tsconfig to resolve alias import issues ([fc74ad2](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/fc74ad2fc4e0a77d53473819561a918ce70b3386))
+* **typescript:** add 'DOM' library in tsconfig ([247729b](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/247729b90b4682dfbc4f4b43fb6d42483afdc6ff))
+* **typescript:** add alias imports ([2bfeef1](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/2bfeef17aaf57f12bfcd50f67035476593c7bebc))
+
+
+### ✨ Features
+
+* **appbar:** create an appbar and app drawer ([6712148](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/67121484b815864954d0467b4b132701253846c8))
+* **pages:** add material ui styling when displaying page not found ([2e27bde](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/2e27bde4b1b7e805148e08284b39020560046b0d))
+* **pages:** display version and build number on about page with material-ui ([bf7fdfb](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/bf7fdfbb49d46df7f6c32ed4897c4dd277041c86))
+* **theme:** add material-ui theme ([00f53a5](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/00f53a57ae0bc50989622fec61503b801397fa10))
+* **ui:** set material-ui to render in server side ([4621f8c](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/4621f8c6e438f8ac12aaafe3eac30ab22b2f7d26))
+
 ### [1.0.21](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.0.20...1.0.21) (2020-12-30)
 
 
