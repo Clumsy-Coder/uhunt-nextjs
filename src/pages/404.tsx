@@ -1,25 +1,16 @@
 import React from 'react';
-import Link from 'next/link';
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 
 const HomePage: React.FunctionComponent = () => {
   return (
     <>
-      <h1>404 - Page Not Found</h1>
-      <div>
-        <Link href='/'>index</Link>
-      </div>
-      <div>
-        <Link href='/about'>about</Link>
-      </div>
-      <div>
-        <Link href='/favorites'>favorites</Link>
-      </div>
-      <div>
-        <Link href='/problem'>problem</Link>
-      </div>
-      <div>
-        <Link href='/user'>user</Link>
-      </div>
+      <Container>
+        <Box textAlign='center'>
+          <Typography variant='h1'>404</Typography>
+        </Box>
+      </Container>
     </>
   );
 };
