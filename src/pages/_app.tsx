@@ -5,7 +5,9 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
 
 import theme from '@utils/theme';
+import AppHeaderBar from '@containers/appHeaderBar';
 
+// eslint-disable-next-line react/prop-types
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   React.useEffect(() => {
     // Remove the server-side injected CSS.
@@ -23,6 +25,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
+        <AppHeaderBar />
         <Component {...pageProps} />
       </ThemeProvider>
     </>
