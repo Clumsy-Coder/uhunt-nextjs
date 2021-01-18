@@ -1,3 +1,12 @@
+### [1.1.9](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.1.8...1.1.9) (2021-01-18)
+
+
+### 📦 Build System
+
+* **devDep:** bump commitizen from 4.2.2 to 4.2.3 ([#39](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/39)) ([a096401](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/a096401fd5e1ef26d01753831047040e69a99249))
+* **devDep:** bump eslint from 7.17.0 to 7.18.0 ([#41](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/41)) ([7dbb8a9](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/7dbb8a962ff1a18a028045c25bc0148d7303c4d8))
+* **devDep:** bump semantic-release from 17.3.2 to 17.3.3 ([#40](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/40)) ([0eaab5b](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/0eaab5b669a6e8246e2640d7f9833e23fda2b131))
+
 ### [1.1.8](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.1.7...1.1.8) (2021-01-14)
 
 
