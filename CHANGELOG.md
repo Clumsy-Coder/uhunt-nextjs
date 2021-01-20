@@ -1,3 +1,11 @@
+### [1.1.12](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.1.11...1.1.12) (2021-01-20)
+
+
+### 📦 Build System
+
+* **devDep:** bump enzyme-adapter-react-16 from 1.15.5 to 1.15.6 ([#46](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/46)) ([448993c](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/448993c0291e1d7ce4710d4847283a24d66cafa6))
+* **devDep:** bump semantic-release from 17.3.3 to 17.3.4 ([#45](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/45)) ([2544435](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/2544435950657880fec240655e4bda8cbe8a64f5))
+
 ### [1.1.11](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.1.10...1.1.11) (2021-01-19)
 
 
