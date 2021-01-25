@@ -84,5 +84,6 @@
     "**/*.tsx",
     "semanticRelease/commitRules.js",
     "semanticRelease/commitTypes.js", 
+    "next.config.js"
   ]
 }
