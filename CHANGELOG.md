@@ -1,3 +1,12 @@
+### [1.1.14](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.1.13...1.1.14) (2021-01-25)
+
+
+### 📦 Build System
+
+* **deps:** bump @material-ui/core from 4.11.2 to 4.11.3 ([#50](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/50)) ([6144ec8](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/6144ec852b60bc2a8cc1ec46cfb2ee1c66473c72))
+* **devDep:** bump eslint-plugin-tsdoc from 0.2.10 to 0.2.11 ([#49](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/49)) ([89a27cf](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/89a27cfc5b12505cddaa4c66d36585c31b81bd77))
+* **devDep:** bump semantic-release from 17.3.6 to 17.3.7 ([#48](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/48)) ([bb4f890](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/bb4f8900109832858141ccb861040d865a53e9b5))
+
 ### [1.1.13](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.1.12...1.1.13) (2021-01-21)
 
 
