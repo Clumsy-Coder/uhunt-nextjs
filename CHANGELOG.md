@@ -1,3 +1,22 @@
+## [1.2.0](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.1.14...1.2.0) (2021-01-25)
+
+
+### 🐙 Miscellaneous Chores
+
+* **typescript:** add next.config.js file into typescript project ([3178bda](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/3178bda1715ad415e7985856fd6dde7ea4848da4))
+
+
+### ✨ Features
+
+* **_document:** generate Content Security Policy that uses nonce ([e60f60f](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/e60f60fd6532b69fd056e504e29898a1341c545d))
+
+
+### 📦 Build System
+
+* **nextjs-config:** hide 'x-powered-by' HTTP header ([09ff5b3](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/09ff5b338fc61d9b8eb067976366478520cdd360))
+* **nginx:** disable generating CSP in nginx config ([cf1f905](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/cf1f90536d2b09a1a185a9e3680a0db5d9ec0953))
+* **npm:** add uuid npm package ([86abfde](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/86abfdeb1d44b1123c51068d46a527a6f4ab9649))
+
 ### [1.1.14](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.1.13...1.1.14) (2021-01-25)
 
 
