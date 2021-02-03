@@ -1,3 +1,10 @@
+### [1.2.7](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.6...1.2.7) (2021-02-03)
+
+
+### 📦 Build System
+
+* **devDep:** bump @types/react from 17.0.0 to 17.0.1 ([#59](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/59)) ([bc9dd75](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/bc9dd75be3fd11f8286306835e15b47fc522ae98))
+
 ### [1.2.6](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.5...1.2.6) (2021-02-02)
 
 
