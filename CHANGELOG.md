@@ -1,3 +1,10 @@
+### [1.2.8](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.7...1.2.8) (2021-02-08)
+
+
+### 📦 Build System
+
+* **devDep:** bump eslint-config-airbnb-typescript ([#60](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/60)) ([e782982](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/e7829822eb1683e5b2c1b2a6c9a46e5fbba540da))
+
 ### [1.2.7](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.6...1.2.7) (2021-02-03)
 
 
