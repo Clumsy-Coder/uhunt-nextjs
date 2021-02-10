@@ -1,3 +1,10 @@
+### [1.2.11](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.10...1.2.11) (2021-02-10)
+
+
+### 📦 Build System
+
+* **devDep:** bump typescript from 4.1.3 to 4.1.4 ([#64](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/64)) ([0d41b3c](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/0d41b3cf1d24f1c9bbcad3d392b1788e12eabe60))
+
 ### [1.2.10](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.9...1.2.10) (2021-02-09)
 
 
