@@ -1,3 +1,13 @@
+### [1.2.13](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.12...1.2.13) (2021-02-15)
+
+
+### 📦 Build System
+
+* **devDep:** bump @types/react from 17.0.1 to 17.0.2 ([#68](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/68)) ([ad56720](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/ad56720bdc738043d464c9ae0c9a08156adeec46))
+* **devDep:** bump eslint from 7.19.0 to 7.20.0 ([#67](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/67)) ([3eabaff](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/3eabaffef670b46e14d9cadc81e37139207e687b))
+* **devDep:** bump semantic-release from 17.3.8 to 17.3.9 ([#69](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/69)) ([d69beef](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/d69beef522ec3f6ac7b5b0597cd910e3742e192d))
+* **devDep:** bump typescript from 4.1.4 to 4.1.5 ([#66](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/66)) ([4353045](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/4353045dfc379c0cde282ffd8c8e550c309ac542))
+
 ### [1.2.12](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.11...1.2.12) (2021-02-10)
 
 
