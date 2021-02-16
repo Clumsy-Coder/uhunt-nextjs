@@ -1,3 +1,12 @@
+### [1.2.14](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.13...1.2.14) (2021-02-16)
+
+
+### 📦 Build System
+
+* **deps:** bump next from 10.0.6 to 10.0.7 ([#72](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/72)) ([ad12952](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/ad1295258e58ed5cf0df7024e68b9a8a92101173))
+* **devDep:** bump @typescript-eslint/parser from 4.15.0 to 4.15.1 ([#73](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/73)) ([32b6ab3](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/32b6ab32c52aebf6eaae1774a5422991c4b6b828))
+* **devDep:** bump eslint-import-resolver-typescript ([#70](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/70)) ([f2fead1](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/f2fead14dae75109fd6a586a52d72199fdaafb5d))
+
 ### [1.2.13](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.12...1.2.13) (2021-02-15)
 
 
