@@ -1,3 +1,10 @@
+### [1.2.16](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.15...1.2.16) (2021-02-17)
+
+
+### 📦 Build System
+
+* **devDep:** bump eslint-plugin-jest from 24.1.3 to 24.1.5 ([#74](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/74)) ([edee907](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/edee90759d20f9384ab4ea7e32f083d2ab56ab40))
+
 ### [1.2.15](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.14...1.2.15) (2021-02-16)
 
 
