@@ -1,3 +1,10 @@
+### [1.2.17](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.16...1.2.17) (2021-02-23)
+
+
+### 📦 Build System
+
+* **devDep:** bump @typescript-eslint/eslint-plugin ([#76](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/76)) ([92ad78e](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/92ad78eef4d993ff6765cffedfe3acfa6d65cc18))
+
 ### [1.2.16](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.15...1.2.16) (2021-02-17)
 
 
