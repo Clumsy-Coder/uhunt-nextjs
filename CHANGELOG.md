@@ -1,3 +1,10 @@
+### [1.2.19](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.18...1.2.19) (2021-02-24)
+
+
+### 📦 Build System
+
+* **devDep:** bump ts-jest from 26.5.1 to 26.5.2 ([#78](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/78)) ([8a0c8dd](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/8a0c8dd7ae869a3e4291561e0c08185d1b10378d))
+
 ### [1.2.18](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.17...1.2.18) (2021-02-23)
 
 
