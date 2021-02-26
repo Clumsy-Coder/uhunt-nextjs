@@ -1,3 +1,10 @@
+### [1.2.21](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.20...1.2.21) (2021-02-26)
+
+
+### 📦 Build System
+
+* **devDep:** bump semantic-release from 17.3.9 to 17.4.0 ([#81](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/81)) ([96f8bfd](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/96f8bfdf16961bb78357cbeafadae29cb089b0e3))
+
 ### [1.2.20](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.19...1.2.20) (2021-02-24)
 
 
