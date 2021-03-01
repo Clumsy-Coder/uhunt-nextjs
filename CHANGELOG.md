@@ -1,3 +1,10 @@
+### [1.2.22](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.21...1.2.22) (2021-03-01)
+
+
+### 📦 Build System
+
+* **devDep:** bump eslint from 7.20.0 to 7.21.0 ([#82](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/82)) ([0c12ac0](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/0c12ac0162b393358573d60b9e3e2074d8527c94))
+
 ### [1.2.21](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.20...1.2.21) (2021-02-26)
 
 
