@@ -1,3 +1,15 @@
+### [1.2.23](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.22...1.2.23) (2021-03-19)
+
+
+### 📦 Build System
+
+* **devDep:** bump eslint-config-prettier from 7.2.0 to 8.1.0 ([#80](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/80)) ([f83cf1a](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/f83cf1a2e8dcbfda19ad39a0694ea6b47580af53))
+
+
+### 🐙 Miscellaneous Chores
+
+* **eslint:** change eslint plugin loading for prettier ([#105](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/105)) ([2476907](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/247690712ed1bfefe0cb58232df306c7958fe6c6)), closes [/github.com/prettier/eslint-config-prettier/blob/main/CHANGELOG.md#version-800-2021-02-21](https://github.com/Clumsy-Coder//github.com/prettier/eslint-config-prettier/blob/main/CHANGELOG.md/issues/version-800-2021-02-21)
+
 ### [1.2.22](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.21...1.2.22) (2021-03-01)
 
 
