@@ -1,3 +1,15 @@
+### [1.2.24](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.23...1.2.24) (2021-03-19)
+
+
+### 📦 Build System
+
+* **devDep:** bump typescript from 4.2.2 to 4.2.3 ([#87](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/87)) ([a99aa39](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/a99aa3913b0743d987d6771a0ad2088467549067))
+
+
+### 👷 Continuous Integration
+
+* **github-actions:** change the username to github.repository_owner ([#108](https://github.com/Clumsy-Coder/uhunt-nextjs/issues/108)) ([00eaaf9](https://github.com/Clumsy-Coder/uhunt-nextjs/commit/00eaaf94dabf0c2da17ec2af2966e15f54f75dd0))
+
 ### [1.2.23](https://github.com/Clumsy-Coder/uhunt-nextjs/compare/1.2.22...1.2.23) (2021-03-19)
 
 
